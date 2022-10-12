@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="{author}">
+    <meta name="description" content="{description}">
+    <meta name="revised" content="{date}">
+    <title>{title}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{theme-color}">
+
+    <link rel="icon" type="image/x-icon" href="{favicon}?h={hash}">
+    <link rel="manifest" href="{webmanifest}?h={hash}">
+
+    <link rel="stylesheet" href="style/reset.css?h={hash}">
+    <link rel="stylesheet" href="style/variables.css?h={hash}">
+    <link rel="stylesheet" href="style/base.css?h={hash}">
+    <link rel="stylesheet" href="style/lightbox.css?h={hash}">
+
+    <script defer type="text/javascript" src="script/lightbox.js?h={hash}"></script>
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <main>
+        <section>
+            <h1>WWF's Panda symbol</h1>
+            <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named
+                Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the
+                establishment of WWF.</p>
+        </section>
+
+        <article>
+            <h2>Google Chrome</h2>
+            <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular
+                web browser today!</p>
+        </article>
+
+        <article>
+            <h2>Mozilla Firefox</h2>
+            <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most
+                popular web browser since January, 2018.</p>
+        </article>
+
+        <article>
+            <h2>Microsoft Edge</h2>
+            <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced
+                Internet Explorer.</p>
+        </article>
+    </main>
+
+    <footer>
+        <a href="{imprint-link}">{imprint-text}</a>
+        <address>
+            {contact-intro}<a href="mailto:{contact-email}">{contact-email}</a>
+        </address>
+    </footer>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <button id="lightboxclose">X</button>
+        <div id="lightboxtarget"></div>
+    </div>
+
+</body>
+
+</html>
