@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="{author}">
+    <meta name="description" content="{description}">
+    <meta name="revised" content="{date}">
+    <title>{title}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{theme-color}">
+
+    <link rel="icon" type="image/x-icon" href="{favicon}?h={auto.hash}">
+    <link rel="manifest" href="{webmanifest}?h={auto.hash}">
+
+    <link rel="stylesheet" href="style/reset.css?h={auto.hash}">
+    <link rel="stylesheet" href="style/variables.css?h={auto.hash}">
+    <link rel="stylesheet" href="fonts/fira_code.css?h={auto.hash}">
+    <link rel="stylesheet" href="style/base.css?h={auto.hash}">
+    <link rel="stylesheet" href="style/lightbox.css?h={auto.hash}">
+
+    <script defer type="text/javascript" src="script/lightbox.js?h={auto.hash}"></script>
+</head>
+
+<body>
+
+    <header class="singlepage">
+        <img src="{logo}" alt="{logo-description}">
+    </header>
+
+    <main>
+        |page-content|
+        <article>
+            <h2>Hello World!</h2>
+            <p>This is a Test!</p>
+        </article>
+        <section class="gallery">
+            <figure class="link">
+                <a href="https://via.placeholder.com/560x315" aria-label="{gallery-view}" onclick="openLightbox(event);"><img src="https://via.placeholder.com/560x315" width="560" height="315" alt="image text"></a>
+                <figcaption>Text</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/560x315" width="560" height="315">
+                <figcaption>Text</figcaption>
+            </figure>
+            <figure>
+                <img src="https://via.placeholder.com/560x315" width="560" height="315">
+                <figcaption>Text</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <a href="{imprint-link}">{imprint-text}</a>
+        <address>
+            {contact-intro}<a href="mailto:{contact-email}">{contact-email}</a>
+        </address>
+    </footer>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <button id="lightboxclose">X</button>
+        <div id="lightboxtarget"></div>
+    </div>
+
+</body>
+
+</html>

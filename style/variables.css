@@ -1,0 +1,13 @@
+:root {
+    --text-background: #212527;
+    --background: #181B1D;
+    --foreground: #e8edf3;
+    --accent: #086315;
+    --accent-hover: #1fba38;
+    --accent2: #0065d1;
+    --accent2-hover: #00c6ff;
+    --font-size: 0.90em;
+    --small-spacing: 16px;
+    --large-spacing: 32px;
+    --border-radius: 8px;
+}
