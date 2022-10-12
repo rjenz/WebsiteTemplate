@@ -1,6 +1,9 @@
 body {
     font-size: var(--font-size);
     font-family: var(--font-family);
+    line-height: var(--large-spacing);
+    background-color: var(--background);
+    color: var(--foreground);
     max-width: calc(960px + var(--large-spacing));
     width: calc(100% - var(--large-spacing));
     margin-top: var(--large-spacing);
@@ -26,6 +29,12 @@ main {
     gap: var(--small-spacing);
 }
 
+main > section, main > article {
+    background-color: var(--text-background);
+    padding: var(--small-spacing);
+    border-radius: var(--border-radius);
+}
+
 footer {
     display: flex;
     flex-direction: row;
@@ -36,9 +45,42 @@ a {
     font-weight: 300;
     color: var(--accent);
     text-decoration: none;
+    transition: color 0.25s ease;
 }
 
 a:hover {
     text-decoration: underline;
     color: var(--accent-hover);
+}
+
+section.gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: var(--small-spacing);
+}
+
+section.gallery > figure {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    top: 0;
+    transition: top 0.25s ease;
+}
+
+section.gallery > figure.link{
+    cursor: pointer;
+}
+
+section.gallery > figure.link:hover {
+    top: calc(var(--small-spacing) / 2 * -1);
+}
+
+section.gallery > figure > figcaption  {
+    background-color: var(--background);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
