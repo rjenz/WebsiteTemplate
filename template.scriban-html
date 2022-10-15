@@ -10,7 +10,7 @@
     <title>{{website.title}}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="{{website.theme-color}}">
+    <meta name="theme-color" content="{{website.theme_color}}">
 
     <link rel="icon" type="image/x-icon" href="{{website.favicon}}?h={{auto.hash}}">
     <link rel="manifest" href="{{website.webmanifest}}?h={{auto.hash}}">
@@ -27,7 +27,7 @@
 <body>
 
     <header class="{{if pages}}multipage{{else}}singlepage{{end}}">
-        <img src="{{website.logo}}" alt="{{website.logo-description}}">
+        <img src="{{website.logo}}" alt="{{website.logo_description}}">
     </header>
 
     {{if pages}}
@@ -44,15 +44,15 @@
         {{end}}
     </main>
 
-    {{if website.imprint-link or website.contact-email}}
+    {{if website.imprint_link or website.contact_email}}
     <footer>
-        {{if website.imprint-link}}
-        <a href="{{website.imprint-link}}">{{website.imprint-text}}</a>
+        {{if website.imprint_link}}
+        <a href="{{website.imprint_link}}">{{website.imprint_text}}</a>
         {{end}}
 
-        {{if website.contact-email}}
+        {{if website.contact_email}}
         <address>
-            {{website.contact-intro}}<a href="mailto:{{website.contact-email}}">{{website.contact-email}}</a>
+            {{website.contact_intro}}<a href="mailto:{{website.contact_email}}">{{website.contact_email}}</a>
         </address>
         {{end}}
     </footer>
