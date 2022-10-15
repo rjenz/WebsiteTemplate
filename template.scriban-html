@@ -15,7 +15,7 @@
     <link rel="icon" type="image/x-icon" href="{{website.favicon}}?h={{auto.hash}}">
     <link rel="manifest" href="{{website.webmanifest}}?h={{auto.hash}}">
 
-    <link rel="stylesheet" href="style/reset.css?h={{{{auto.hash}}">
+    <link rel="stylesheet" href="style/reset.css?h={{auto.hash}}">
     <link rel="stylesheet" href="style/variables.css?h={{auto.hash}}">
     <link rel="stylesheet" href="fonts/fira_code.css?h={{auto.hash}}">
     <link rel="stylesheet" href="style/base.css?h={{auto.hash}}">
@@ -26,14 +26,26 @@
 
 <body>
 
-    <header class="{{if pages}}multipage{{else}}singlepage{{end}}">
+    {{if (pages | array.size) > 1}}
+    <header class="multipageheader">
+        <img src="{{website.logo}}" alt="{{website.logo_description}}">
+        <div class="title">
+            <h1>{{website.author}}</h1>
+            <p>{{website.author_occupation}}</p>
+        </div>
+    </header>
+    {{else}}
+    <header class="singlepageheader">
         <img src="{{website.logo}}" alt="{{website.logo_description}}">
     </header>
+    {{end}}
 
-    {{if pages}}
+    {{if (pages | array.size) > 1}}
     <nav>
         {{for page in pages}}
-        <a href="{{page.link}}">{{page.text}}</a>
+        {{if page.is_in_nav}}
+        <a {{if page.is_active}}class="active"{{end}} href="{{page.link}}">{{page.text}}</a>
+        {{end}}
         {{end}}
     </nav>
     {{end}}
@@ -44,7 +56,7 @@
         {{end}}
     </main>
 
-    {{if website.imprint_link or website.contact_email}}
+    {{if website.imprint_link || website.contact_email}}
     <footer>
         {{if website.imprint_link}}
         <a href="{{website.imprint_link}}">{{website.imprint_text}}</a>

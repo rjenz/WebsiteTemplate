@@ -5,8 +5,8 @@
 html {
     height: auto;
     min-height: 100%;
-    border-top: solid var(--small-spacing) var(--accent2);
-    border-bottom: solid var(--small-spacing) var(--accent2);
+    border-top: solid 8px var(--accent2);
+    border-bottom: solid 8px var(--accent2);
 }
 
 html, body {
@@ -29,11 +29,49 @@ body {
     gap: var(--small-spacing);
 }
 
+.singlepageheader, .multipageheader {
+    width: 100%;   
+}
+
+.singlepageheader > img {
+    width: 100%;
+    height: auto; 
+}
+
+.multipageheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--large-spacing);
+}
+
+.multipageheader > .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.multipageheader > img {
+    width: 30%;
+    height: auto;
+    max-height: 256px;
+}
+
 nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     gap: var(--large-spacing);
+}
+
+nav > a {
+    font-size: calc(var(--font-size) * 2);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+nav > .active {
+    text-decoration: underline;
 }
 
 main {
