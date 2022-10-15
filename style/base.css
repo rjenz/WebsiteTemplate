@@ -12,14 +12,15 @@ html {
 html, body {
     font-size: var(--font-size);
     font-family: var(--font-family);
-    line-height: var(--large-spacing);
+    line-height: var(--line-height);
     color: var(--foreground);
     background-color: var(--background);
 }
 
 body {
-    max-width: calc(960px + var(--large-spacing));
+    min-width: 460px;
     width: calc(100% - var(--large-spacing));
+    max-width: calc(960px + var(--large-spacing));
     margin-top: var(--large-spacing);
     margin-left: auto;
     margin-right: auto;
@@ -91,6 +92,10 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+ul {
+    padding-left: var(--small-spacing);
 }
 
 a {
