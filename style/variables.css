@@ -1,14 +1,14 @@
 :root {
-    --text-background: #212527;
-    --background: #181B1D;
-    --foreground: #e8edf3;
-    --accent: #086315;
-    --accent-hover: #1fba38;
-    --accent2: #0065d1;
-    --accent2-hover: #00c6ff;
-    --font-family: "Fira Code", monospace;
-    --font-size: 0.90em;
-    --small-spacing: 16px;
-    --large-spacing: 32px;
-    --border-radius: 8px;
+    --text-background: {{style.text_background}};
+    --background: {{style.background}};
+    --foreground: {{style.foreground}};
+    --accent: {{style.accent}};
+    --accent-hover: {{style.accent_hover}};
+    --accent2: {{style.accent2}};
+    --accent2-hover: {{style.accent2_hover}};
+    --font-family: {{style.font_family}};
+    --font-size: {{style.font_size}};
+    --small-spacing: {{style.small_spacing}};
+    --large-spacing: {{style.large_spacing}};
+    --border-radius: {{style.border_radius}};
 }
