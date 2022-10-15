@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="{{website.author}}">
+    <meta name="description" content="{{website.description}}">
+    <meta name="revised" content="{{auto.date}}">
+    <title>{{website.title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{{website.theme-color}}">
+
+    <link rel="icon" type="image/x-icon" href="{{website.favicon}}?h={{auto.hash}}">
+    <link rel="manifest" href="{{website.webmanifest}}?h={{auto.hash}}">
+
+    <link rel="stylesheet" href="style/reset.css?h={{{{auto.hash}}">
+    <link rel="stylesheet" href="style/variables.css?h={{auto.hash}}">
+    <link rel="stylesheet" href="fonts/fira_code.css?h={{auto.hash}}">
+    <link rel="stylesheet" href="style/base.css?h={{auto.hash}}">
+    <link rel="stylesheet" href="style/lightbox.css?h={{auto.hash}}">
+
+    <script defer type="text/javascript" src="script/lightbox.js?h={{auto.hash}}"></script>
+</head>
+
+<body>
+
+    <header class="{{if pages}}multipage{{else}}singlepage{{end}}">
+        <img src="{{website.logo}}" alt="{{website.logo-description}}">
+    </header>
+
+    {{if pages}}
+    <nav>
+        {{for page in pages}}
+        <a href="{{page.link}}">{{page.text}}</a>
+        {{end}}
+    </nav>
+    {{end}}
+
+    <main>
+        {{for article in articles}}
+        {{article}}
+        {{end}}
+    </main>
+
+    {{if website.imprint-link or website.contact-email}}
+    <footer>
+        {{if website.imprint-link}}
+        <a href="{{website.imprint-link}}">{{website.imprint-text}}</a>
+        {{end}}
+
+        {{if website.contact-email}}
+        <address>
+            {{website.contact-intro}}<a href="mailto:{{website.contact-email}}">{{website.contact-email}}</a>
+        </address>
+        {{end}}
+    </footer>
+    {{end}}
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <button id="lightboxclose">X</button>
+        <div id="lightboxtarget"></div>
+    </div>
+
+</body>
+
+</html>
