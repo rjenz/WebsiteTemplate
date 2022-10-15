@@ -1,0 +1,25 @@
+<section class="gallery">
+    {{for item in items}}
+    <figure {{if item.link}}class="link"{{end}}>
+
+        {{if item.link}}
+        <a href="{{item.link}}">
+        {{end}}
+
+        {{if item.light_box}}
+        <a href="{{item.image}}" aria-label="Zoom" onclick="openLightbox(event);">
+        {{end}}
+
+        <img src="{{item.thumbnail}}" width="{{item.tumb_width}}" height="{{item.tumb_height}}" alt="{{item.alt}}">
+        
+        {{if item.link || item.light_box}}
+        </a>
+        {{end}}
+
+        {{if item.caption}}
+        <figcaption>{{item.caption}}</figcaption>
+        {{end}}
+        
+    </figure>
+    {{end}}
+</section>
