@@ -8,7 +8,7 @@
     --accent2-hover: {{style.accent2_hover}};
     --font-family: {{style.font_family}};
     --font-size: {{style.font_size}};
-    --line-height: {{style.line_height}}
+    --line-height: {{style.line_height}};
     --small-spacing: {{style.small_spacing}};
     --large-spacing: {{style.large_spacing}};
     --border-radius: {{style.border_radius}};
