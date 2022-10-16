@@ -148,6 +148,12 @@ a:hover {
     transition: top 0.25s ease;
 }
 
+@media screen and (max-width: 720px) {
+    .gallery > figure {
+        flex-basis: 100%;
+    }
+}
+
 .gallery > figure img {
     width: 100%;
     height: auto;
