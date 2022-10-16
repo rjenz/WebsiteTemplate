@@ -92,10 +92,16 @@ main > section, main > article {
     border-radius: var(--border-radius);
 }
 
+main > section p:last-child, main > article p:last-child {
+    margin-bottom: 0 !important;
+}
+
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0 var(--small-spacing) 0 var(--small-spacing);
+    margin: 0 0 var(--small-spacing) 0;
 }
 
 ul {
@@ -116,15 +122,24 @@ a:hover {
 
 .gallery {
     position: relative;
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: var(--small-spacing);
 }
 
 .gallery > figure {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% - var(--small-spacing) / 2);
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     top: 0;
     transition: top 0.25s ease;
 }
@@ -132,6 +147,7 @@ a:hover {
 .gallery > figure img {
     width: 100%;
     height: auto;
+    border-radius: var(--border-radius);
 }
 
 .gallery > figure.link{
@@ -144,11 +160,9 @@ a:hover {
 
 .gallery > figure > figcaption  {
     background-color: var(--background);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     text-align: center;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    margin-top: calc(var(--line-height) * -1);
 }
 
 .gallery > figure.link > figcaption.link  {
