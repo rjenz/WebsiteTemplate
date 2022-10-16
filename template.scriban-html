@@ -72,7 +72,7 @@
 
     <div id="lightbox" onclick="closeLightbox()">
         <button id="lightboxclose">X</button>
-        <div id="lightboxtarget"></div>
+        <div id="lightboxtarget"><img loading="lazy"></div>
     </div>
 
 </body>
