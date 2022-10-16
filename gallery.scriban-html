@@ -10,7 +10,7 @@
         <a href="{{item.image}}" aria-label="Zoom" onclick="openLightbox(event);">
         {{end}}
 
-        <img src="{{item.thumbnail}}?h={{auto.salt}}" width="{{item.tumb_width}}" height="{{item.tumb_height}}" alt="{{item.alt}}" loading="lazy">
+        <img src="{{item.thumbnail}}?h={{auto.salt}}" width="{{item.thumb_width}}" height="{{item.thumb_height}}" alt="{{item.alt}}" loading="lazy">
         
         {{if item.link || item.light_box}}
         </a>
