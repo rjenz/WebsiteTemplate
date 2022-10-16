@@ -12,16 +12,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="{{website.theme_color}}">
 
-    <link rel="icon" type="image/x-icon" href="{{website.favicon}}?h={{auto.hash}}">
-    <link rel="manifest" href="{{website.webmanifest}}?h={{auto.hash}}">
+    <link rel="icon" type="image/x-icon" href="{{website.favicon}}?h={{auto.salt}}">
+    <link rel="manifest" href="{{website.webmanifest}}?h={{auto.salt}}">
 
-    <link rel="stylesheet" href="style/reset.css?h={{auto.hash}}">
-    <link rel="stylesheet" href="style/variables.css?h={{auto.hash}}">
-    <link rel="stylesheet" href="fonts/fira_code.css?h={{auto.hash}}">
-    <link rel="stylesheet" href="style/base.css?h={{auto.hash}}">
-    <link rel="stylesheet" href="style/lightbox.css?h={{auto.hash}}">
+    <link rel="stylesheet" href="style/reset.css?h={{auto.salt}}">
+    <link rel="stylesheet" href="style/variables.css?h={{auto.salt}}">
+    <link rel="stylesheet" href="fonts/fira_code.css?h={{auto.salt}}">
+    <link rel="stylesheet" href="style/base.css?h={{auto.salt}}">
+    <link rel="stylesheet" href="style/lightbox.css?h={{auto.salt}}">
 
-    <script defer type="text/javascript" src="script/lightbox.js?h={{auto.hash}}"></script>
+    <script defer type="text/javascript" src="script/lightbox.js?h={{auto.salt}}"></script>
 </head>
 
 <body>

@@ -1,6 +1,6 @@
 <section class="gallery">
     {{for item in items}}
-    <figure {{if item.link}}class="link"{{end}}>
+    <figure {{if item.link || item.light_box}}class="link"{{end}}>
 
         {{if item.link}}
         <a href="{{item.link}}">
@@ -10,14 +10,14 @@
         <a href="{{item.image}}" aria-label="Zoom" onclick="openLightbox(event);">
         {{end}}
 
-        <img src="{{item.thumbnail}}" width="{{item.tumb_width}}" height="{{item.tumb_height}}" alt="{{item.alt}}">
+        <img src="{{item.thumbnail}}?h={{auto.salt}}" width="{{item.tumb_width}}" height="{{item.tumb_height}}" alt="{{item.alt}}" loading="lazy">
         
         {{if item.link || item.light_box}}
         </a>
         {{end}}
 
         {{if item.caption}}
-        <figcaption>{{item.caption}}</figcaption>
+        <figcaption {{if item.link}}class="link"{{end}}>{{item.caption}}</figcaption>
         {{end}}
         
     </figure>

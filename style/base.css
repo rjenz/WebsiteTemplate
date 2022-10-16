@@ -150,3 +150,15 @@ a:hover {
     right: 0;
     text-align: center;
 }
+
+.gallery > figure.link > figcaption.link  {
+    font-weight: 300;
+    background-color: var(--accent);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.gallery > figure.link:hover > figcaption.link  {
+    background-color: var(--accent-hover);
+    text-decoration: underline;
+}
