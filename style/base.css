@@ -86,10 +86,14 @@ main {
     gap: var(--small-spacing);
 }
 
-main > section, main > article {
+main > article {
     background-color: var(--text-background);
     padding: var(--small-spacing);
     border-radius: var(--border-radius);
+}
+
+main > section > iframe, main > article > iframe {
+    width: 100%;
 }
 
 main > section p:last-child, main > article p:last-child {
