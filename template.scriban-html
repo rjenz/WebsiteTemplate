@@ -28,7 +28,7 @@
 
     {{if (pages | array.size) > 1}}
     <header class="multipageheader">
-        <img src="{{website.logo}}" alt="{{website.logo_description}}" width="{{website.logo_width}}" height="{{website.logo_height}}">
+        <img src="{{website.logo}}?h={{auto.salt}}" alt="{{website.logo_description}}" width="{{website.logo_width}}" height="{{website.logo_height}}">
         <div class="title">
             <h1>{{website.author}}</h1>
             <p>{{website.author_occupation}}</p>
