@@ -36,7 +36,7 @@
     </header>
     {{else}}
     <header class="singlepageheader">
-        <img src="{{website.logo}}" alt="{{website.logo_description}}" width="{{website.logo_width}}" height="{{website.logo_height}}">
+        <img src="{{website.logo}}?h={{auto.salt}}" alt="{{website.logo_description}}" width="{{website.logo_width}}" height="{{website.logo_height}}">
     </header>
     {{end}}
 
