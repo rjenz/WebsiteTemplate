@@ -108,6 +108,19 @@ footer {
     margin: 0 0 var(--small-spacing) 0;
 }
 
+footer div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+footer .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--large-spacing);
+}
+
 ul {
     padding-left: var(--small-spacing);
 }

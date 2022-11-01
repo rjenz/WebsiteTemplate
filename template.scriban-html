@@ -59,7 +59,17 @@
     {{if website.imprint_link || website.contact_email}}
     <footer>
         {{if website.imprint_link}}
-        <a href="{{website.imprint_link}}">{{website.imprint_text}}</a>
+        <div>
+            <a href="{{website.imprint_link}}">{{website.imprint_text}}</a>
+        </div>
+        {{end}}
+
+        {{if (socials | array.size) > 1}}
+        <div class="socials">
+            {{for social in socials}}
+            <a href="{{social.link}}"><img src="{{social.logo}}?h={{auto.salt}}" alt="{{social.name}}" width="{{social.logo_size}}" height="{{social.logo_size}}" lazy></a>
+            {{end}}
+        </div>
         {{end}}
 
         {{if website.contact_email}}
