@@ -67,7 +67,7 @@
         {{if (socials | array.size) >= 1}}
         <div class="socials">
             {{for social in socials}}
-            <a href="{{social.link}}"><img src="{{social.logo}}?h={{auto.salt}}" alt="{{social.name}}" width="{{social.logo_size}}" height="{{social.logo_size}}" lazy></a>
+            <a rel="me" href="{{social.link}}"><img src="{{social.logo}}?h={{auto.salt}}" alt="{{social.name}}" width="{{social.logo_size}}" height="{{social.logo_size}}" lazy></a>
             {{end}}
         </div>
         {{end}}
