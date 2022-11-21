@@ -121,6 +121,16 @@ footer .socials {
     gap: var(--large-spacing);
 }
 
+footer > .socials > a  {
+    position: relative;
+    top: 0;
+    transition: top 0.25s ease;
+}
+
+footer > .socials > a:hover {
+    top: calc(-4px);
+}
+
 ul {
     padding-left: var(--small-spacing);
 }
