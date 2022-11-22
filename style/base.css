@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-    min-width: 460px;
+    min-width: 500px;
     width: calc(100% - var(--large-spacing));
     max-width: calc(960px + var(--large-spacing));
     margin-top: var(--large-spacing);
@@ -103,6 +103,8 @@ main > section p:last-child, main > article p:last-child {
 footer {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--small-spacing);
     justify-content: space-between;
     padding: 0 var(--small-spacing) 0 var(--small-spacing);
     margin: 0 0 var(--small-spacing) 0;
