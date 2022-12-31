@@ -18,7 +18,7 @@ html, body {
 }
 
 body {
-    min-width: 500px;
+    min-width: 300px;
     width: calc(100% - var(--large-spacing));
     max-width: calc(960px + var(--large-spacing));
     margin-top: var(--large-spacing);
